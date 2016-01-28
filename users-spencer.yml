@@ -1,0 +1,14 @@
+#cloud-config
+
+users:
+  - name: spencer
+    shell: /usr/bin/zsh
+    groups: sudo
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8DPE11srVxI5c90lW2Cz1maixC8PMvaUEKzG+33eN/496kEsWt4sGKNCp9/eZllcut4TQEc7iN/piCvSsvQqoWeajFoHcD8OlV1XoLEbZtW/F6Q3TOTyjEMQP8/shzJWbK4gqyRxAyBk4jarlW1sXbL9HZInWNMofsKfEpOGRH9+yQj1UcICQ0q9fR2KN8XgXmiPPsx7fKzKarGUr7ATxqJVCwHz7UA+kKLsIlZvFMIbeTYDuQcQODvhgY035TYiDT8PwLnoo5buPFVxHUDLJ7UCU2WAgzujAYBHrO6LEM1mcbQgS1MvtgMMQz1N+SeXEwXsiQLMPAhUBgPKasoI1 spencer
+
+runcmd:
+  - sudo -u spencer bash -c 'curl -L https://gist.githubusercontent.com/scjudd/28e9d63bf51a2b3b45a7/raw/3addc902b468794291328a274493a0e5ce885ce7/bootstrap.sh | bash 2>&1 | tee ~/bootstrap.log'
+
+merge_how: "dict(recurse_array)+list(append)"

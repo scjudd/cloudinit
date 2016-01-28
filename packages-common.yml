@@ -1,0 +1,8 @@
+#cloud-config
+
+packages:
+  - zsh
+  - git
+  - htop
+
+merge_how: "dict(recurse_array)+list(append)"

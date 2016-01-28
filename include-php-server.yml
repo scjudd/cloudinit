@@ -1,0 +1,9 @@
+#include
+
+https://raw.githubusercontent.com/scjudd/cloudinit/master/users-spencer.yml
+https://raw.githubusercontent.com/scjudd/cloudinit/master/users-johnny.yml
+https://raw.githubusercontent.com/scjudd/cloudinit/master/package-upgrade.yml
+https://raw.githubusercontent.com/scjudd/cloudinit/master/packages-common.yml
+https://raw.githubusercontent.com/scjudd/cloudinit/master/packages-php-server.yml
+https://raw.githubusercontent.com/scjudd/cloudinit/master/config-php-server.yml
+https://raw.githubusercontent.com/scjudd/cloudinit/master/reboot.yml
